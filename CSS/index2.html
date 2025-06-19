@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <style>
+        /*
+        li{
+            display: inline;
+            width: 3000px;    it will not make any effec
+        }
+            */
+
+        li{
+            display: inline-block;
+            width: 200px;
+        }
+        .flex{
+            display: flex;
+            justify-content: space-around;
+            background-color: yellow;
+            height: 300px;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+        }
+        .grid{
+            background-color:  pink;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            column-gap: 20px;
+            row-gap: 20px;
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Display Property</h1>
+    <h2>Inlinne vs Inline-block</h2>
+    <li>Home</li>
+    <li>Services</li>
+    <li>Projects</li>
+    <li>About</li>
+    <hr>
+
+
+    <h2>Flex Box</h2>
+    <div class="flex">
+        <div>
+            Child1
+        </div>
+<div>
+    Child1
+</div>
+<div>
+    Child2
+</div>
+<div>
+    Child3
+</div>
+<div>
+    Child4
+</div>
+<div>
+    Child5
+</div>
+<div>
+    Child6
+</div>
+    </div>
+  </body>
+
+  <hr>
+
+  <h2>Grid</h2>
+  <div class="grid">
+     <div>
+            Child1
+        </div>
+<div>
+    Child1
+</div>
+<div>
+    Child2
+</div>
+<div>
+    Child3
+</div>
+<div>
+    Child4
+</div>
+<div>
+    Child5
+</div>
+<div>
+    Child6
+</div>
+
+  </div>
+</html>
