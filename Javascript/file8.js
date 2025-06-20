@@ -28,6 +28,8 @@ const cart={
     5:2,
 
 };
+const newCart = ({...cart,2:9,4:6})
+console.log(newCart);
 const items= Object.keys(cart).length
 console.log(items);
 
