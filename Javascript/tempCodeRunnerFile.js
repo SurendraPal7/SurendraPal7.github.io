@@ -1,3 +1,5 @@
-const score = [2,1,7,5,3];
-// console.log(score)
-// console.log(score[0]);
+const newScore= score.map((value)=>{
+//     return value+5;
+
+// });
+// console.log(newScore);
