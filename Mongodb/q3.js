@@ -6,11 +6,11 @@
     db.employees.find({department:"IT"},{_id:0,name:1})
     db.employees.find({department:"IT"},{_id:0,name:1,salary:1})
 
-        db.employees.find({department:{$eq:"IT"}},{_id:0,name:1,salary:1})
-         db.employees.find({salary:{$gt:30000}},{_id:0,name:1,salary:1})
-                  db.employees.find(
-                    {salary:{$gte:30000}}
-                    ,{_id:0,name:1,salary:1})
+  db.employees.find({department:{$eq:"IT"}},{_id:0,name:1,salary:1})
+  db.employees.find({salary:{$gt:30000}},{_id:0,name:1,salary:1})
+     db.employees.find(                 
+  {salary:{$gte:30000}}
+   ,{_id:0,name:1,salary:1})
   db.employees.find({salary:{$lt:30000}},{_id:0,name:1,salary:1})
     db.employees.find({salary:{$lte:30000}},{_id:0,name:1,salary:1})
 
@@ -33,7 +33,7 @@
       db.employees.find(
         
         {$and:[{salary:{$gt:60000}},{department:"IT"}]},
-        {_id:0,name:1,salary:1}
+        {_id:0,name:1,salary:1} 
 
     
     )
