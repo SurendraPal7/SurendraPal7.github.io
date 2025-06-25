@@ -67,3 +67,30 @@ db.employees.updateMany(
 
 
 db.employees.updateMany({},{$set:{points:1}})
+
+
+//update operators(array)
+db.employees.updateMany(
+    {},
+    {$push:{rating:5}}
+)
+db.employees.updateMany(
+    {},
+    {$push:{rating:3}}
+)
+db.employees.updateMany(
+    {},
+    {$pull:{rating:{$gt:2}}}
+)
+
+db.employees.updateMany(
+    {},
+    {$addToSet:{location:"INdia"}}
+)
+
+db.employees.updateMany(
+{},{$pop:{location:1}}    
+)
+db.employees.updateMany(
+{},{$pop:{location:-1}}    
+)
