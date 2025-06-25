@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<p lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <script>
+        function f1(val){
+            alert(val)
+        }
+    </script>
+  </head>
+  <body>
+    
+    <!-- <p onclick="f1(event.target.innerHTML)">Home</p>
+    <p onclick="f1(event.target.innerHTML)">Cart</p> -->
+
+    <p>
+        <input type="email" 
+        
+        placeholder="Email"
+         onchange="f1(event.target.val)">
+    <input type="password"
+     placeholder="passowrd"
+       onchange="f1(event.target.value)">
+
+    </p>
+    <button>Submit</button>
+  </body>
+</p>
