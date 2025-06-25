@@ -13,3 +13,39 @@
                     ,{_id:0,name:1,salary:1})
   db.employees.find({salary:{$lt:30000}},{_id:0,name:1,salary:1})
     db.employees.find({salary:{$lte:30000}},{_id:0,name:1,salary:1})
+
+    db.employees.find(
+        
+        {salary:{$gt:4000},department:"IT"},
+        {_id:0,name:1,salary:1}
+
+    
+    )
+
+      db.employees.find(
+        
+        {$or:[{salary:{$gt:60000}},{department:"IT"}]},
+        {_id:0,name:1,salary:1}
+
+    
+    )
+
+      db.employees.find(
+        
+        {$and:[{salary:{$gt:60000}},{department:"IT"}]},
+        {_id:0,name:1,salary:1}
+
+    
+    )
+
+
+    db.employees.find(
+        {$or:[{},{}]}
+
+    )
+    db.employees.find(
+        {$or:[{},{}]}
+    )
+
+    db.employees.find({department:{$eq:"IT"}})
+        db.employees.find({department:{$ne:"IT"}})
