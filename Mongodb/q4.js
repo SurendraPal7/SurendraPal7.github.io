@@ -29,3 +29,4 @@ db.employees.insertOne({
 
 db.employees.find({department:{$in: ["Admin","HR"]}})
 db.employees.find({department:{$nin: ["Admin","HR"]}})
+
