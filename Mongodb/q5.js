@@ -94,3 +94,5 @@ db.employees.updateMany(
 db.employees.updateMany(
 {},{$pop:{location:-1}}    
 )
+
+

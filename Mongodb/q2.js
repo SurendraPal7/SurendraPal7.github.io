@@ -34,3 +34,5 @@ db.users.drop()  // to delete the collection
 
 
 // show collections
+
+db.createCollection("orders")

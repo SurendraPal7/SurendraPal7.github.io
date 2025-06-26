@@ -35,9 +35,9 @@
 // let b="10"
 // console.log(a-b)
 
-// let a=10;
-// let b="10"
-// console.log(a/b)
+let a=10;
+let b="10"
+console.log(a/b)
 
 // const C1="LPI";
 // C1="MU";
