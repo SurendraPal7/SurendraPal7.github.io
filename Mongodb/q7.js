@@ -86,7 +86,51 @@ db.marks.aggregate([
 
 
 db.marks.aggregate([
-    {$group:{_id:"$term",AvgScore:{$avg:"$score"}}
+    {$group:{_id:"$subject",AvgScore:{$avg:"$score"}}},
+    {$sort:{_id:1}}
 
-    }
+    
 ])
+
+db.marks.aggregate([
+    {$group:{_id:{term:"$term",subject:"$subject"},
+    AvgScore:{$avg:"$score"}}},
+    {$sort:{_id:1}}
+
+    
+])
+
+db.marks.aggregate([
+  { $match: { name: "john" } },
+  {$group:{_id:{term:"$term",name:"$name"},
+   AvgScore:{$avg:"$score"}}},
+])
+db.studentInfo.insertMany([
+    {_id:"s1",name:"John"},
+    {_id:"s2",name:"Cathy"}
+])
+
+
+db.employees.updateMany(
+    {},
+    {$rename:{points:"Score"}}
+)
+
+db.marks.updateMany(
+    {},
+    {$rename:{name:"sid"}}
+)
+
+db.marks.updateMany(
+    {},
+    {$rename:{name:"sid"}}
+)
+db.marks.updateMany(
+    {sid:"john"},
+    {$set:{sid:"s1"}}
+)
+
+db.marks.updateMany(
+    {sid:"cathy"},
+    {$set:{sid:"s2"}}
+)
