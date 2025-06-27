@@ -75,3 +75,18 @@ db.marks.insertMany([
     {name:"cathy",term:"t3",subject:"science",score:80},
 
 ])
+
+
+db.marks.aggregate([
+    {$group:{_id:"$name",AvgScore:{$avg:"$score"}}
+
+    }
+])
+
+
+
+db.marks.aggregate([
+    {$group:{_id:"$term",AvgScore:{$avg:"$score"}}
+
+    }
+])
