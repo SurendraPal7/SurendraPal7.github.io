@@ -138,12 +138,13 @@ db.marks.updateMany(
 
 
 db.studentInfo.aggregate([
+    {$match:{name:"john"}},
     {
         $lookup:{
             from:"marks",
             localField:"_id",
             foreignField:"sid",
-            as:"marks",
+            as:"marks",  
 
         },
     },
