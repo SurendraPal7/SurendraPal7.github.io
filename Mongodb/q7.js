@@ -134,3 +134,24 @@ db.marks.updateMany(
     {sid:"cathy"},
     {$set:{sid:"s2"}}
 )
+
+
+
+db.studentInfo.aggregate([
+    {
+        $lookup:{
+            from:"marks",
+            localField:"_id",
+            foreignField:"sid",
+            as:"marks",
+
+        },
+    },
+    {$unwind:"$marks"},
+    //group
+    {$group:{_id:"$marks.term",
+    TotalScore:{$sum:"$marks.score"}}}
+
+])
+
+
