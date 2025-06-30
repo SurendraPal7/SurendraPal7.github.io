@@ -29,7 +29,8 @@ const renderUserList = () => {
 
 const loginForm = () => {
   const str = `
-    <div style='display:flex'>
+   <div class='flex-box'>
+
     <div>
     <h3>Login Form</h3>
     <p id='errorTxt'></p>

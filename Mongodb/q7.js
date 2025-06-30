@@ -156,3 +156,61 @@ db.studentInfo.aggregate([
 ])
 
 
+db.employees.aggregate([
+    {$project:{_id_:0,name:1,salary:1}}
+])
+
+
+db.employees.aggregate([
+
+ { $project: { _id: 0, name: 1, salary: 1,Grade:"Grade A"} }
+])
+
+
+//condition operator
+db.employees.aggregate([
+ { $project: { _id: 0,
+     name: 1,
+      salary: 1,
+      Grade:{$cond:[{$gt:["$salary",3000]},"Grade A","Grade B"]} }}
+])
+
+
+db.employees.aggregate([
+ { $project: { _id: 0,
+     name: 1,
+      salary: 1,
+      Grade:{$cond:{
+        
+        if:{$gt:["$salary",3000]}, 
+        then:"Grade A",
+        else:"Grade B"
+        }}
+      }},
+      {$out:"GradeWiseSalary"}
+
+])
+
+
+
+db.createView("salaryview","employees",[
+ { $project: { _id: 0,
+     name: 1,
+      salary: 1,
+      department:1,
+      Grade:{$cond:{
+        
+        if:{$gt:["$salary",3000]}, 
+        then:"Grade A",
+        else:"Grade B"
+        }}
+      }},
+      
+
+])
+
+
+// to backup the data base
+// mongodump -d  Database_name -o  D:\ pathway
+//to restore the data again
+// mongorestore -d Database_name D:\pathway\dump\database_name\
