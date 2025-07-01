@@ -13,4 +13,4 @@ mongod --shardsvr --port 27020 --replSet rs1 --dbpath d:\dbshards\s1
 mongod --shardsvr --port 27021 --replSet rs1 --dbpath d:\dbshards\s1r
 Open new tab and Initiate replica set for shard1 servers
 mongosh --port 27020
-rs.initiate({_id:'rs1',members:[{_id:0,host:'localhost:27020'},{_id:1,host:'localhost:27021'}]})
+rs.initiate({_id:'rs1',members:[{_id:0,host:'localhost:27020'},{_id:1,host:'localhost:27021'}]}) 
