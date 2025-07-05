@@ -1,5 +1,5 @@
 import express from 'express';
-import mongoose from 'mongoose';
+import mongoose, { Model } from 'mongoose';
 import bcrypt from "bcrypt";
 import jwt from 'jsonwebtoken'; 
 const SECRET="Something"
@@ -73,3 +73,18 @@ app.post('/login',async(req,res)=>{
         
 
 })
+
+// app.post("/update/:email",async(req,res)=>{
+//     try{
+//         const {email}=req.params;
+//         const {username,password,role}=req.body;
+//         //i only want change roll user to admin
+//         if(role && role!=="admin"){
+//             return res.status(400).json({message:"You can only change role to admin"});
+//         }
+//         const existingUser = await user00000 
+        
+        
+
+//     }
+// });
