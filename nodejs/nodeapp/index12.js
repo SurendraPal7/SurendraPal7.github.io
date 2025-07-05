@@ -4,7 +4,7 @@ import productRouter from './productRoute.js';
 const app = express();
 
 
-
+//this file is related to productRoute and userRoutes
 
 app.listen(8000, () => {
     console.log("Server started on port 8000");
